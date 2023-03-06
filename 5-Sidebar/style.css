@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #dddddd;
+}
+
+.sidebar-toggle {
+    font-size: x-large;
+    color: royalblue;
+    top: 2rem;
+    right: 3rem;
+    position: fixed;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.close-btn {
+    font-size: x-large;
+    background-color: transparent;
+    border-color: transparent;
+    color: royalblue;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+    transform: rotate(360deg);
+}
+
+.logo {
+    justify-self: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.links li {
+    display: block;
+    padding: 1rem 2rem;
+    transition: all 0.3s linear;
+}
+
+.links li:hover {
+    color: white;
+    background-color: royalblue;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s linear;
+    transform: translate(-100%);
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+@media screen and (min-width: 600px) {
+    .sidebar {
+        width: 400px;
+    }
+}

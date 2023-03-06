@@ -1,0 +1,19 @@
+
+button {
+    margin-top: 20px;
+    border-color: black;
+    border-radius: 50%;
+    width: 36px;
+    background-color: black;
+}
+
+.prev-btn {
+    margin-right: 5px;
+    font-size: 20px;
+    color: white;
+}
+.next-btn {
+    margin-right: 5px;
+    font-size: 20px;
+    color: white;
+}
