@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
+header {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+h1 {
+    color: white;
+}
+
+.switch-btn {
+    width: 7rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    border-radius: 20px;
+    border-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.switch-btn span {
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    color: darkgreen;
+}
+
+.switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: darkgreen;
+    border-radius: 20px;
+    margin: 0;
+    display: block;
+    transition: all 0.3s linear;
+}
+
+.switch.slide {
+    left: 50%;
+}
